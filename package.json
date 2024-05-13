@@ -1,0 +1,52 @@
+{
+  "name": "@0b5vr/scrapbox-parser-to-markdown",
+  "description": "Convert @progfay/scrapbox-parser parsed result to Markdown",
+  "author": "0b5vr",
+  "license": "MIT",
+  "version": "0.0.1",
+  "keywords": [
+    "scrapbox",
+    "markdown"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0b5vr/scrapbox-parser-to-markdown.git"
+  },
+  "files": [
+    "/dist/",
+    "/types/",
+    "/LICENSE"
+  ],
+  "main": "./dist/scrapbox-parser-to-markdown.cjs",
+  "module": "./dist/scrapbox-parser-to-markdown.mjs",
+  "types": "./types/scrapbox-parser-to-markdown.d.ts",
+  "exports": {
+    "import": "./dist/scrapbox-parser-to-markdown.mjs",
+    "require": "./dist/scrapbox-parser-to-markdown.cjs",
+    "node": "./dist/scrapbox-parser-to-markdown.mjs",
+    "default": "./dist/scrapbox-parser-to-markdown.mjs"
+  },
+  "scripts": {
+    "version": "pnpm all",
+    "dev": "cross-env SERVE=1 node bin/build.js",
+    "all": "pnpm test && pnpm clean && pnpm build",
+    "clean": "rimraf dist/ docs/ types/",
+    "build": "pnpm build:js && pnpm build:types",
+    "build:js": "node bin/build.js",
+    "build:types": "tsc --declaration --declarationDir ./types --emitDeclarationOnly",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@progfay/scrapbox-parser": "^9.0.0",
+    "@types/jest": "^29.5.12",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.21.1",
+    "jest": "^29.7.0",
+    "rimraf": "^5.0.7",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "@progfay/scrapbox-parser": "^9.0.0"
+  }
+}

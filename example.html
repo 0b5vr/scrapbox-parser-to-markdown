@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@0b5vr/scrapbox-parser-to-markdown</title>
+  </head>
+  <body>
+    <h1>@0b5vr/scrapbox-parser-to-markdown</h1>
+    <p><a href="https://github.com/0b5vr/scrapbox-parser-to-markdown" target="_blank" rel="noopener noreferrer">Repository</a></p>
+
+    <h2>Scrapbox</h2>
+
+    <p>
+      <label for="inputProjectName">Project Name</label>
+      <input id="inputProjectName" value="0b5vr" /><br />
+      <textarea id="textareaScrapbox" rows="10" cols="50"></textarea>
+    </p>
+
+    <h2>Markdown</h2>
+    <p>
+      <textarea id="textareaMarkdown" rows="10" cols="50" readonly></textarea>
+    </p>
+
+    <script type="module">
+      import { parse } from "https://cdn.jsdelivr.net/npm/@progfay/scrapbox-parser@9.0.0/+esm";
+      import { scrapboxParserToMarkdown } from "./dist/scrapbox-parser-to-markdown.mjs";
+
+      const inputProjectName = document.getElementById("inputProjectName");
+      const textareaScrapbox = document.getElementById("textareaScrapbox");
+      const textareaMarkdown = document.getElementById("textareaMarkdown");
+
+
+      function convert() {
+        const scrapbox = textareaScrapbox.value;
+        const parsed = parse(scrapbox);
+        const markdown = scrapboxParserToMarkdown(parsed, { projectName: inputProjectName.value });
+        textareaMarkdown.value = markdown;
+      }
+
+      textareaScrapbox.value = `Title
+
+[* Hello!]
+
+[Scrapbox] is a tool to stock knowledge.
+
+[Here is the official site. https://scrapbox.io/]
+`;
+      convert();
+
+      inputProjectName.addEventListener("input", convert);
+      textareaScrapbox.addEventListener("input", convert);
+    </script>
+  </body>
+</html>

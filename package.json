@@ -17,6 +17,7 @@
     "/types/",
     "/LICENSE"
   ],
+  "private": false,
   "main": "./dist/scrapbox-parser-to-markdown.cjs",
   "module": "./dist/scrapbox-parser-to-markdown.mjs",
   "types": "./types/scrapbox-parser-to-markdown.d.ts",

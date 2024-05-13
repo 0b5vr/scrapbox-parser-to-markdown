@@ -1,0 +1,28 @@
+name: Deploy Release
+
+on:
+  push:
+    tags:
+    - v*
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Init Stuff
+      uses: ./.github/actions/init
+
+    - name: Build
+      run: yarn build
+
+    - name: Publish
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

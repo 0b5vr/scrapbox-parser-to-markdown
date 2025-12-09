@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import { parse } from '@progfay/scrapbox-parser';
 import { blockToMarkdown } from '../blockToMarkdown';
 import type { ScrapboxParserToMarkdownOptions } from '../ScrapboxParserToMarkdownOptions';

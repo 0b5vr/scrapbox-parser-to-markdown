@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/0b5vr/scrapbox-parser-to-markdown.git"
   },
+  "type": "module",
   "files": [
     "/dist/",
     "/types/",
@@ -35,16 +36,14 @@
     "build": "pnpm build:js && pnpm build:types",
     "build:js": "node bin/build.js",
     "build:types": "tsc --declaration --declarationDir ./types --emitDeclarationOnly",
-    "test": "jest"
+    "test": "vitest run"
   },
   "devDependencies": {
     "@progfay/scrapbox-parser": "^10.0.2",
-    "@types/jest": "^29.5.12",
     "cross-env": "^7.0.3",
     "esbuild": "^0.21.1",
-    "jest": "^29.7.0",
     "rimraf": "^5.0.7",
-    "ts-jest": "^29.1.2",
+    "vitest": "^2.1.6",
     "typescript": "^5.4.5"
   },
   "peerDependencies": {

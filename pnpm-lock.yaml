@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@progfay/scrapbox-parser':
-        specifier: ^9.0.0
-        version: 9.2.0
+        specifier: ^10.0.2
+        version: 10.0.2
       '@types/jest':
         specifier: ^29.5.12
         version: 29.5.14
@@ -436,8 +436,8 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@progfay/scrapbox-parser@9.2.0':
-    resolution: {integrity: sha512-qrjgnZqxAXkUkjnOJowhv3eWGflItf0q9G3uDrndk6yVMWTxrXEDRSmgoMNxyH+tRQqfvrGjadn+tvYZo1w4Ww==}
+  '@progfay/scrapbox-parser@10.0.2':
+    resolution: {integrity: sha512-UmOqpgMAdYM7/mCY25h7gtI4E0vube+1kkoOu7vnWwYSHIbsM088zJacpmfr/+fr61hAbRgeeMrBPw3pvNnMhQ==}
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -1870,7 +1870,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@progfay/scrapbox-parser@9.2.0': {}
+  '@progfay/scrapbox-parser@10.0.2': {}
 
   '@sinclair/typebox@0.27.8': {}
 

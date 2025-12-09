@@ -38,7 +38,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@progfay/scrapbox-parser": "^9.0.0",
+    "@progfay/scrapbox-parser": "^10.0.2",
     "@types/jest": "^29.5.12",
     "cross-env": "^7.0.3",
     "esbuild": "^0.21.1",
@@ -48,6 +48,6 @@
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "@progfay/scrapbox-parser": "^9.0.0"
+    "@progfay/scrapbox-parser": "^10.0.2"
   }
 }

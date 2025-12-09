@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## next
+## 0.2.1 - 2025-12-10
 
 ### ✨ New Features
 

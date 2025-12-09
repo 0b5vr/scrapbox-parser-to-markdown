@@ -6,7 +6,7 @@ const packageJson = require('../package.json');
 const SERVE = process.env.SERVE === '1';
 
 // == banner =======================================================================================
-const copyright = '(c) 2024 0b5vr';
+const copyright = '(c) 2024-2025 0b5vr';
 const licenseName = 'MIT License';
 const licenseUri = 'https://github.com/0b5vr/scrapbox-parser-to-markdown/blob/release/LICENSE';
 

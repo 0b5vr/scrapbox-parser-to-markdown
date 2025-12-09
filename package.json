@@ -20,7 +20,7 @@
   "private": false,
   "main": "./dist/scrapbox-parser-to-markdown.cjs",
   "module": "./dist/scrapbox-parser-to-markdown.mjs",
-  "types": "./types/scrapbox-parser-to-markdown.d.ts",
+  "types": "./types/index.d.ts",
   "exports": {
     "import": "./dist/scrapbox-parser-to-markdown.mjs",
     "require": "./dist/scrapbox-parser-to-markdown.cjs",

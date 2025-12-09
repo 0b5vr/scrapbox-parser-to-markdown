@@ -1,6 +1,8 @@
 import type { CommandLineNode, DecorationNode, FormulaNode, GoogleMapNode, HashTagNode, HelpfeelNode, IconNode, ImageNode, LinkNode, Node, StrongIconNode, StrongImageNode, StrongNode } from '@progfay/scrapbox-parser';
 import { ScrapboxParserToMarkdownOptions } from './ScrapboxParserToMarkdownOptions';
-import { NumberListNode } from '@progfay/scrapbox-parser/lib/block/node/type';
+
+// not exposed
+type NumberListNode = Extract<Node, { type: 'numberList' }>;
 
 function relativeLinkToAbsolute(link: string, options: ScrapboxParserToMarkdownOptions = {}): string {
   if (options.relativeLinkHandler != null) {

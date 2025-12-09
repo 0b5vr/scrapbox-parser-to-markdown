@@ -1,8 +1,12 @@
-const path = require('path');
-const esbuild = require('esbuild');
-const packageJson = require('../package.json');
+import path from 'path';
+import esbuild from 'esbuild';
+import { fileURLToPath } from 'url';
+import packageJson from '../package.json' with { type: 'json' };
 
 // == env ==========================================================================================
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const SERVE = process.env.SERVE === '1';
 
 // == banner =======================================================================================

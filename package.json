@@ -30,11 +30,11 @@
   },
   "scripts": {
     "version": "pnpm all",
-    "dev": "cross-env SERVE=1 node bin/build.js",
+    "dev": "cross-env SERVE=1 node bin/build.mjs",
     "all": "pnpm test && pnpm clean && pnpm build",
     "clean": "rimraf dist/ docs/ types/",
     "build": "pnpm build:js && pnpm build:types",
-    "build:js": "node bin/build.js",
+    "build:js": "node bin/build.mjs",
     "build:types": "tsc --declaration --declarationDir ./types --emitDeclarationOnly",
     "test": "vitest run"
   },

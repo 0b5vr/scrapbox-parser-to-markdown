@@ -2,6 +2,10 @@
 
 ## next
 
+### ✨ New Features
+
+- New option `strictLineBreaks` to control markdown line breaks behavior
+
 ### 🧹 Chores
 
 - Update CI, now Trusted Publishing is working for real

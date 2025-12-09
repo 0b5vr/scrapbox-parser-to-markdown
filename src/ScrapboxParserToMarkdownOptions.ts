@@ -28,6 +28,14 @@ export interface ScrapboxParserToMarkdownOptions {
   listBullet?: string;
 
   /**
+   * Specify whether to use the authentic markdown line breaks.
+   * If `true`, it adds two spaces at the end of each line to enforce line breaks in markdown.
+   * If `false`, it only adds a single line break.
+   * `true` by default.
+   */
+  strictLineBreaks?: boolean;
+
+  /**
    * Specify how it handles the relative links.
    * By default, it converts the relative links to absolute links to scrapbox using {@link projectName}.
    * This option supercedes {@link projectName}.

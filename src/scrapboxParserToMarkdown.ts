@@ -6,5 +6,6 @@ export function scrapboxParserToMarkdown(
   blocks: Block[],
   options: ScrapboxParserToMarkdownOptions = {},
 ): string {
-  return blocks.map((block) => blockToMarkdown(block, options)).join('  \n');
+  const delimiter = (options.strictLineBreaks ?? true) ? '  \n' : '\n';
+  return blocks.map((block) => blockToMarkdown(block, options)).join(delimiter);
 }
